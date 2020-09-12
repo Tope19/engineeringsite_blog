@@ -1,0 +1,57 @@
+.counter {
+    margin-top: -6rem;
+    width: 100%;
+    padding-top: 5rem;
+    background-color: $color-secondary-2;
+    color: $color-white;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include respond(tab-port) {
+        margin-top: -9rem;
+        z-index: 100 !important;
+    }
+
+
+    & .row {
+        margin-top: 1rem; 
+        
+        @include respond(tab-land) {
+            display: flex;
+            text-align: center !important;
+        }
+
+        & .col-lg-3 {
+
+            &:not(:last-child) {
+                margin-bottom: 1rem !important;
+            }
+        }
+    }
+
+    & span {
+        font-size: 4rem;
+        float: left;
+        margin-right: 2rem;
+
+        @include respond(tab-land) {
+            margin-left: 2.5rem;
+            float: none;
+        }
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            float: none;
+        }
+    }
+
+    & h1 {
+        float: left;
+
+        @include respond(tab-land) {
+            font-size: 1.8rem;
+            float: none;
+        }
+    }
+}

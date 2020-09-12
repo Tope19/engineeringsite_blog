@@ -1,0 +1,119 @@
+.section-contact {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    & .row {
+
+        & .col-lg-4 {            
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
+
+            @include respond(tab-port) {
+                width: 95%;                
+                margin-bottom: 4rem;
+                position: relative !important;
+
+                @include absCenter;
+            }
+
+            & .form__input {
+                display: block;
+                width: 100%;
+                padding: 1.4rem 3rem;
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+                border-radius: 3rem;
+                border: 1px solid #ccc;
+                outline: none;
+
+                &:first-child {
+                    margin-top: 2rem;
+                }
+
+                &--2 {
+                    padding-bottom: 3rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+
+    & .contact {
+        position: relative !important;
+        width: 80%;
+        padding-bottom: 5rem;
+        background-color: $color-white;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+        border-radius: 1rem;
+        padding: 3rem;
+
+        @include absCenter;
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 3rem;
+        }
+
+        &__header {
+            text-align: center;
+            font-family: 'Open sans';
+            font-weight: bold;
+            margin-bottom: 3rem;
+            font-size: 3.5rem;
+            color: $color-primary;
+
+            @include respond(tab-port) {
+                font-size: 2.3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            & br {
+                @include respond(tab-port) {
+                    display: none;
+                }
+            }
+        }
+
+        &__content {
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+            font-family: 'Open sans';
+
+            @include respond(tab-port) {
+                text-align: center;
+                margin-left: 0;
+            }
+
+            & .social-icons {
+
+                & a {
+                    color: $color-white;
+                }
+
+                & i {
+                    width: 3rem;
+                    height: 3rem;
+                    background-color: $color-secondary;                    
+                    border-radius: 50%;
+                    line-height: 3rem;
+                    text-align: center;
+                    margin-right: 1rem;                    
+                    font-size: 1.8rem;
+                }
+            }
+
+            & h1 {
+                color: $color-secondary;
+
+                @include respond(tab-port) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            & p {
+                color: #a09d9d;
+                font-size: 1.3rem;                
+            }
+        }
+    }
+}

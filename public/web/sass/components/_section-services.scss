@@ -1,0 +1,152 @@
+.section-services {
+    padding-top: 1rem;    
+    overflow: hidden;
+    margin-top: -7rem;
+    @include clearfix;
+
+    @include respond(phone) {
+        margin-top: -12rem;
+    }
+
+    & .services__box {
+        margin-top: 5rem;
+
+
+        & .row {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        & .col-lg-6 {
+            position: relative;
+            max-width: 40% !important;
+            padding: 4rem 5rem;
+            margin-right: 2rem;
+            background-color: $color-white;
+            border-top: 3px solid $color-primary;
+            text-align: center;
+            overflow: hidden;   
+            margin-bottom: 3rem;
+
+            @include respond(tab-port)  {
+                max-width: 100% !important;
+                margin-right: 0;
+            }
+
+            &:hover:before {
+                top: 0;
+            }
+
+            &:hover .btn {                
+                top: 75%;
+                visibility: visible;
+            }
+
+            &:hover span {
+                visibility: visible;
+                top: 50%;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                z-index: 1;
+                left: 0;
+                background-color: $color-secondary;
+                top: 100%;
+                transition: .3s ease;
+            }
+
+            & img {
+                position: absolute !important;
+                height: 8rem;
+                z-index: 2;
+                @include absCenter;                
+            }
+
+            & h3 {
+                font-weight: 700;
+                font-size: 1.7rem;    
+                margin-top: 10rem;            
+            }
+
+            & span {
+                width: 70%;
+                position: absolute;
+                font-size: 1.3rem;
+                color: $color-white;
+                z-index: 20;
+                top: 55%;
+                transition: all .1s;
+                visibility: hidden;
+                @include absCenter;   
+            }
+
+            & p {
+                font-size: 1.3rem;
+                // margin-bottom: 3rem;
+            }
+
+            & .btn {
+                position: absolute;
+                top: 80%;
+                z-index: 20;
+                transition: all .2s ease;
+                visibility: hidden;
+                @include absCenter;
+
+                @include respond(phone) {
+                    padding: 1.1rem 3rem !important;
+                }
+            }
+        }
+    }
+
+    & .row {
+        .col-lg-7 {
+            background-image: linear-gradient(rgba(#000, .4)), url(../img/bg3.jpg);
+            background-size: cover;
+            overflow: hidden;
+            background-repeat: no-repeat;
+        }
+
+        .col-lg-5 {
+            background-color: $color-secondary !important;
+            padding: 5rem;
+
+            @include respond(phone) {
+                padding: 2rem;
+            }
+        }
+    }
+
+    & .bg__content {
+        margin-top: 2rem;
+
+        @include respond(phone) {
+            margin-top: 5rem;
+        }
+
+        & h1 {
+            position: relative;
+            z-index: 3;
+            color: $color-white;
+
+            &:before {
+                border: 6px solid $color-primary;
+            }
+        }
+
+        & p {
+            color: $color-white;
+            width: 100%;
+        }
+
+        & hr {
+            background-color: $color-white;
+        }
+    }
+}

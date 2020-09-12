@@ -1,0 +1,295 @@
+.section {
+    &-about {
+        padding-top: 5rem;
+
+        &--3 {
+
+            &:first-child {
+                padding-top: 10rem;
+            }
+
+            & .bg__content {
+
+
+                & h1,
+                span {
+
+                    @include respond(phone) {
+                        text-align: center !important;
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                }
+
+                & h1 {
+
+                    & br {
+                        display: none;
+                    }
+
+                    &:before {
+
+                        @include respond(phone) {
+                            left: 8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &--2 {
+            position: relative;
+            z-index: -1;
+            border-bottom: 1px solid #eee;
+
+            & .col-lg-6 {
+                & .bg__content {
+                    margin-left: 13rem;
+                    margin-top: 4rem;
+
+                    @include respond(tab-port) {
+                        margin-left: 0;
+                    }
+
+                    & h1 {
+                        &:before {
+                            top: 2rem;
+                            left: 20rem;
+
+                            @include respond(tab-port) {
+                                left: 6.8rem;
+                            }
+                        }
+                    }
+
+                    & span {
+                        color: #4d4d4d;
+                    }
+
+                    & p {
+                        width: 100%;
+
+                        & img {
+                            width: 4rem;
+                            height: 4rem;
+                            margin-right: .5rem;
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .row {
+            margin-bottom: 4rem;
+
+            & .col-lg-6 {
+                // outline: 1px solid #000;
+                text-align: center;
+                margin-bottom: 2rem;
+                z-index: -1;
+
+                & img {
+                    width: 45.2rem;
+                    height: 53rem;
+
+                    @include respond(phone) {
+                        height: 30rem;
+                        width: 26rem;
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                & .bg {
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient($color-primary, #dd7f13);
+                    position: absolute;
+                    z-index: -1;
+                    animation: rotate infinite 6s forwards;
+                    transition: 2s ease;
+                    border-radius: 27% 73% 52% 48% / 40% 40% 60% 60%;
+
+                    &--2 {
+                        background-image: linear-gradient(#ce2020, #f33e3e);
+                    }
+
+                    &--img {
+                        height: 60rem;
+
+                        &-2 {
+                            padding-right: 5rem;
+                            width: 90%;
+                            height: 65rem;
+
+                            @include respond(tab-port) {
+                                padding-right: 0;
+                                width: 100%;
+                            }
+
+                            @include respond(phone) {
+                                height: 40rem !important;
+                            }
+                        }
+
+
+                        @include respond(phone) {
+                            height: 33rem;
+                            margin-bottom: 3rem;
+                        }
+                    }
+
+                    @include respond(phone) {
+                        width: 95%;
+                        height: 95%;
+                    }
+
+                    & .btn {                                                
+                        margin-top: .5rem;
+
+                        @include respond(tab-land) {
+                            margin-top: 1rem;
+                            @include absCenter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .banner-box {
+
+        & .col-lg-4 {
+            max-width: 32% !important;
+            padding: 1.2rem 4rem;
+            background-color: $color-white;
+            border-radius: .5rem;
+            box-shadow: 0 0 .8rem #d4d3d3;
+            margin-bottom: 4rem;
+            margin-right: 1rem;
+            overflow: hidden;
+            border: 2px solid transparent;
+
+            @include respond(tab-port) {
+                margin-right: .5rem;
+                padding: 0;
+            }
+
+            @include respond(phone) {
+                max-width: 90% !important;
+                margin: 0 auto;
+            }
+
+            &:hover {
+                border: 2px solid $color-primary;
+            }
+
+            @include respond(tab-port) {
+                text-align: center;
+                margin-bottom: 2rem;
+                @include clearfix;
+            }
+        }
+
+        &__content {
+            position: relative;
+            top: 2.5rem;
+
+            @include respond(tab-port) {
+                top: 2rem;
+            }
+
+            & h3 {
+                font-weight: bold;
+                margin-left: 1rem;
+            }
+
+            & p {
+                font-size: 1.2rem;
+                margin-left: 1rem;
+                color: #666666;
+            }
+
+            & img {
+                margin-top: 1.7rem;
+                height: 6rem;
+                margin-left: -1rem;
+
+                @include respond(tab-port) {
+                    margin-bottom: 1rem;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes rotate {
+    0% {
+        border-radius: 27% 73% 52% 48% / 40% 40% 60% 60%;
+    }
+
+    50% {
+        border-radius: 35% 65% 70% 30% / 62% 31% 69% 38%;
+    }
+
+    80% {
+        border-radius: 48% 52% 62% 38% / 36% 41% 59% 64%;
+    }
+
+    100% {
+        border-radius: 27% 73% 52% 48% / 40% 40% 60% 60%;
+    }
+}
+
+.bg {
+    &__content {
+        text-align: justify;
+
+        & h1 {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 3.5rem;
+
+            &:before {
+                content: "";
+                width: 170px;
+                height: 100px;
+                border: 6px solid #f2f2f2;
+                position: absolute;
+                left: 47px;
+                top: -2rem;
+                z-index: -1;
+            }
+        }
+
+        & .btn {
+            position: relative !important;
+
+            @include respond(tab-land) {
+                @include absCenter;
+            }
+        }
+
+        & span {
+            color: $color-primary;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        & p {
+            margin-top: 2rem;
+            width: 80%;
+            text-align: left;
+            font-size: 1.5rem;
+            margin-bottom: 2rem !important;
+
+            @include respond(tab-land) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+.sign {
+
+    &--container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(rgba(#000, .5));
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;        
+    }
+
+    &__gif {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 10;
+        visibility: hidden;
+        // opacity: 0;
+        transition: .3s ease-out;
+        background-image: linear-gradient(#23b64f, #33c860);
+        transform: scale(3);
+        
+
+        & .cancelIcon {
+            color: $color-white;
+            top: 2rem !important;
+            right: 2rem !important;
+        }
+
+        & img {
+            position: relative !important;
+            width: 20rem;
+            height: 20rem;
+            top: 30%;          
+            border-radius: 50%;
+
+            @include absCenter;
+        }
+    }
+
+    &__box {
+        width: 35rem;
+        height: 59rem;
+        background-color: $color-white;
+        position: relative !important;
+        top: 7%;
+        transform: translateX(-7%) scale(.8);
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 1rem 2rem #4d4d4d;
+        transition: all .2s ease;        
+
+        @include respond(tab-land) {
+            width: 30rem;
+            top: 1.5%;
+            height: 55rem;            
+            transform: translateX(-3%);
+            @include absCenter;
+        }
+
+        @include absCenter;
+
+        &--content {
+            width: 90%;
+            height: 90%;
+            top: 5%;
+            padding: 2rem;
+            transform: translateX(-5%);
+            text-align: center;  
+            transition: .5s ease-out;          
+            
+            @include absCenter;
+            @include respond(tab-land) {
+                padding: 1rem;
+            }
+
+            &:nth-child(2) {
+                left: 150%;                
+            }
+
+            &-img {
+                width: 27rem;
+                height: 27rem;
+                position: relative !important;
+
+                @include absCenter;
+
+                @include respond(tab-land) {
+                    width: 25rem;
+                    height: 25rem;
+                }
+            }
+        }
+
+        & h1 {
+            color: $color-primary;
+
+            & img {
+                width: 3rem;
+                height: 3rem;
+                margin-top: -1.5rem;
+            }
+        }
+
+        & .form {
+            padding: 1rem;
+
+            &__text {
+                font-family: 'Open sans';
+                font-size: 1.1rem;
+            }
+
+            &__input {
+                width: 100%;
+                margin-bottom: 1rem;
+                padding: 1.2rem 4rem;
+                border-radius: 2.5rem;
+                outline: none;
+                border: 2px solid $color-primary;
+                font-size: 1.2rem;
+
+                &:placeholder-shown {
+                    border: 1px solid #cccccc;
+                }
+            }
+
+            & .btn {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+.cancelIcon {
+    position: absolute;
+    float: right;
+    right: 1.2rem;
+    font-size: 2rem;
+    top: -.5rem;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-secondary-2;
+    }
+}

@@ -1,0 +1,11 @@
+.section-map {
+    height: 50rem;
+    
+    & .mapouter {
+        height: 100% !important;
+
+        & .gmap_canvas {
+            height: 100% !important;   
+        }
+    }
+}

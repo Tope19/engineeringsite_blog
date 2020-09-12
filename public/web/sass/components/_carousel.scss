@@ -1,0 +1,39 @@
+.carousel {      
+    padding: 2rem;    
+    text-align: center;
+
+    &__content {                
+        width: 100%;                        
+        padding: 2rem;  
+        margin-top: 3rem;
+        
+
+        & img {
+            width: 7rem;
+            height: 7rem;
+        }
+
+        & h3 {
+            font-size: 1.8rem;
+            color: $color-secondary-2;
+        }
+
+        & h4 {
+            font-size: 1.3rem;
+            color: #2d2d2d;
+            margin-bottom: 2rem;
+        }
+
+        & p {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.main-carousel {
+    width: 100% !important;    
+}
+
+.carousel-cell {
+    width: 100% !important;    
+}

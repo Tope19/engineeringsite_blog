@@ -1,0 +1,34 @@
+.btn {
+    padding: 1.2rem 4rem !important;
+    background: $color-primary !important;
+    color: $color-white !important;
+    border-radius: 2.5rem !important;
+    font-size: 1.2rem !important;
+    border: none !important;
+
+    &--padding {
+        padding: 1.2rem 5.5rem !important;
+        box-shadow: 0 0 .4rem $color-primary-light;
+    }
+
+    &--mobile {
+       
+        @include respond(phone) {
+            width: 100%;
+            padding: 1.3rem 4rem !important;
+        }
+    }
+
+    &--black {
+        background-image: linear-gradient(#000, #4d4d4d) !important;  
+    }
+
+    &--gradient {        
+        background: none !important;
+        background-image: linear-gradient($color-primary, #dd7f13) !important;        
+    }
+    
+    &:active {
+        outline: none !important;
+    }
+}

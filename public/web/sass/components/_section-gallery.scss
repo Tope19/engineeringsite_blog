@@ -1,0 +1,257 @@
+.section-gallery {
+    margin-top: -10rem;
+
+    &--2 {
+        padding-top: 10rem;
+
+        @include respond(tab-land) {
+            padding-top: 0;
+            margin-top: -5rem !important;
+        }
+
+        & .row {
+
+            & .btn {
+
+                @include respond(tab-land) {
+                    display: none !important;
+                }
+
+                @include respond(phone) {
+                    display: block !important;
+                    width: 13rem;
+                    // 
+                }
+            }
+
+            & .col-lg-4 {
+                margin-bottom: 5rem !important;
+                height: 35rem !important;
+
+                @include respond(tab-port) {
+                    height: 28rem !important;
+                    display: flex;
+                }
+
+                &:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+
+            & .pj__content {
+                top: 25% !important;
+
+
+                @include respond(tab-port) {
+                    top: 15% !important;
+
+                    & h3 {
+                        margin-top: 2rem;
+                    }
+                }
+
+                @include respond(phone) {
+                    & p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond(tab-port) {
+        margin-top: 0;
+    }
+
+    & .bg__content {
+        position: absolute;
+        top: 30%;
+        margin-left: 3rem;
+
+        @include respond(tab-port) {
+            top: 0 !important;
+            margin-left: 0;
+        }
+
+        & h1 {
+            z-index: -3;
+
+            &:before {
+                border-color: $color-primary;
+            }
+        }
+
+        & span {
+            color: $color-primary;
+        }
+    }
+
+    & .row {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -.8rem;
+        margin: 0 auto;
+
+        @include respond(tab-land) {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        @include respond(tab-land) {
+            margin-left: -1.5rem !important;
+            margin-right: -1.5rem !important;
+        }
+
+        &:first-child {
+            padding-top: 10rem;
+
+            @include respond(tab-port) {
+                padding-top: 0;
+            }
+        }
+
+        &:last-child {
+
+            @include respond(tab-port) {
+                margin-bottom: 13rem;
+            }
+        }
+
+        @include respond(tab-port) {
+            position: relative;
+            top: 10rem;
+        }
+
+        & .btn {
+            position: relative !important;
+            top: 2rem;
+            text-align: center !important;            
+            
+            &--gradient {
+                @include respond(tab-land) {
+                    @include absCenter;
+                }
+            }
+        }
+
+        & .col-lg-9 {
+
+            @include respond(tab-port) {
+                margin-top: 4rem;
+            }
+        }
+
+        & .col-lg-4 {
+            position: relative;
+            height: 25rem;
+            // box-shadow: 0 3rem 2rem #dddbdb;
+            // border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+            padding: 0 !important;
+            max-width: 32% !important;
+            transition: all .5s;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            border: 4px solid transparent;
+
+            @include respond(tab-land) {
+                max-width: 33% !important;
+            }
+
+            @include respond(phone) {
+                max-width: 90% !important;
+                margin: 0 auto !important;
+                margin-bottom: 3rem !important;
+            }
+
+            &:not(:last-child) {
+
+                @include respond(tab-port) {
+                    margin-right: 0 !important;
+                    margin: 0 auto !important;
+                }
+            }
+
+            &:hover img {
+                transform: scale(1.2);
+            }
+
+            &:hover {
+
+                & .pj__content {
+
+                    & h3,
+                    p {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+
+            & .pj__content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 20%;
+                padding: 2rem;
+                color: $color-white;
+                text-align: center;
+                overflow: hidden;
+                text-align: center;
+                z-index: 3;
+                color: $color-white !important;
+
+                @include absCenter;
+
+                & a {
+                    color: $color-primary;
+                }
+
+                & h3,
+                p {
+                    opacity: 0;
+                    transition: all 1s ease;
+
+                    @include respond(tab-port) {
+                        opacity: 1;
+                    }
+                }
+
+                & h3 {
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    margin-bottom: 1rem;
+                }
+
+                & p {
+                    font-size: 1.3rem;
+                    color: $color-white;
+                }
+            }
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                position: absolute;
+                background-image: linear-gradient(rgba(#000, .4));
+                left: 50%;
+                top: 50%;
+                transition: all 1s;
+                transform: translate(-50%, -50%);
+                opacity: .5;
+            }
+
+            & img {
+                transition: all .5s;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
